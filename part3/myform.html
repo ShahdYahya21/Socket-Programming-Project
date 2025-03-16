@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ENCS3320-My Tiny Webserver</title> <!--gives the document this title: "ENCS3320-My Tiny Webserver"-->
+</head>
+<body>
+    <pr>Image name</pr>
+    <input type="text" id="imageInput" placeholder="Enter image filename">
+    <button onclick="displayImage()">Open Image</button>
+
+    <div id="imageContainer">
+        <img id="displayedImage" src="" alt="Displayed Image">
+    </div>
+
+    <script>
+        function displayImage() {
+            // Get the filename entered in the text field
+            var filename = document.getElementById('imageInput').value;
+
+            // Construct the path to the image
+            var imagePath = filename; // Assuming the images have a .png extension
+
+            // Get the image element
+            var imgElement = document.getElementById('displayedImage');
+
+            // Set the src attribute to display the image
+            imgElement.src = imagePath;
+        }
+    </script>
+</body>
+</html>
+
